@@ -28,7 +28,7 @@ Git is a free and open source distributed version control system designed to han
 11. Add another text [click here](mostknown.html.php) add just **Jeff Bezos** info.
 12. Run **git diff** see the difference between working directory and staging area then add file to staging area
 12. After git add, run **git commit -m 'add Jeff Bezos info and second commit'**
-13. Run **git log**  viewing the commit history,  extra and better command(**git log --oneline**)
+13. Run **git log**  viewing the commit history,  extra and better command(**git log --oneline**).If your cursor gets stuck in “git log” mode in the terminal, press “**q**” on your keyboard to escape.
 14. Run **history** command to show you all of the last commands that have been recently used.
 * Well done FIRST exercise is done. Are you ready for next exercises?? :)))
 
@@ -42,5 +42,5 @@ To see HEAD commit run **git show HEAD**.
 
 
 * **git checkout HEAD** filename,  will restore the file in your working directory to look exactly as it did when you last made a commit.
-* **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory,
-* **git reset** commit_SHA, This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits) 
+* **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
+* **git reset** commit_SHA, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
