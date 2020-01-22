@@ -1,9 +1,9 @@
 # GIT
 
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-```html
+
 ### BASIC GIT WORK FLOW 
-```
+
 * **git init** creates a new Git repository
 * **git status** inspects the contents of the working directory and staging area
 * **git add** adds files from the working directory to the staging area
@@ -63,3 +63,20 @@ To see HEAD commit run **git show HEAD**.
 12. Run **git log** your last commit should shown as( **add Jeff Bezos info and second commit**).
 
 * Well done Second exercise is done. You are learning so fast:)))
+
+### BRANCH
+So far, We’ve worked in a one Git branch which is master. Git allows us to create branches to experiment with versions of a project. Imagine you want to create version of a story with a happy ending. You can create a new branch and make the happy ending changes to that branch only. It will have no effect on the master branch until you’re ready to merge the happy ending to the master branch.
+
+
+![](picture/branch.png)
+
+* The circles are commits, and together form the Git project’s commit history.
+* New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have.
+
+
+* **git branch** show branches and which branch you are on it.
+* **git branch newBranchName** to create a new branch.
+
+* **git checkout branchName** used to switch from one branch to another.
+* **git merge branchName** to merge branches and (you will understand with exercises better).
+* **git branch -d branchName** will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
