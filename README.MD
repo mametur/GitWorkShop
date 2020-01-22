@@ -14,7 +14,7 @@ Git is a free and open source distributed version control system designed to han
 
 ![minipic](picture/gitworkflow.png)
 
-####  First Exercise
+### First Exercise
 
 1. Run **mkdir (repo name)**   &emsp;&emsp;  give repo name = famous
 2. Run **cd famous**           &emsp;&emsp;     cd (change directory) 
