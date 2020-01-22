@@ -11,7 +11,7 @@ Git is a free and open source distributed version control system designed to han
 * **git log** shows a list of all previous commits
 
 
-(![minipic](picture/gitworkflow.png)
+![minipic](picture/gitworkflow.png)
 
 ###  First Exercise
 
@@ -27,7 +27,20 @@ Git is a free and open source distributed version control system designed to han
 10. Run **git commit -m 'add Elon Musk info and first commit'**
 11. Add another text [click here](mostknown.html.php) add just **Jeff Bezos** info.
 12. Run **git diff** see the difference between working directory and staging area then add file to staging area
-12. After git add, run **git commit -m 'add Jeff Bezos info and second commit'
+12. After git add, run **git commit -m 'add Jeff Bezos info and second commit'**
 13. Run **git log**  viewing the commit history,  extra and better command(**git log --oneline**)
 14. Run **history** command to show you all of the last commands that have been recently used.
 * Well done FIRST exercise is done. Are you ready for next exercises?? :)))
+
+
+### BACKTRACK  IN GIT
+
+When working on a Git project, sometimes we make changes that we want to get rid of. We can absolutely do it with Git.
+
+Before we dive into backtracking flow we need to know what HEAD is.In Git, the commit you are currently on is known as the **HEAD** commit. In other words HEAD is a reference to the last commit in the currently check-out branch.
+To see HEAD commit run **git show HEAD**.
+
+
+* **git checkout HEAD** filename,  will restore the file in your working directory to look exactly as it did when you last made a commit.
+* **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory,
+* **git reset** commit_SHA, This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits) 
