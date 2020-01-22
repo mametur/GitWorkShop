@@ -1,7 +1,7 @@
-#GIT
+# GIT
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-###BASIC GIT WORK FLOW
+### BASIC GIT WORK FLOW
 
 * **git init** creates a new Git repository
 * **git status** inspects the contents of the working directory and staging area
