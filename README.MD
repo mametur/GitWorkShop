@@ -64,19 +64,22 @@ To see HEAD commit run **git show HEAD**.
 
 * Well done Second exercise is done. You are learning so fast:)))
 
-### BRANCH
-So far, We’ve worked in a one Git branch which is master. Git allows us to create branches to experiment with versions of a project. Imagine you want to create version of a story with a happy ending. You can create a new branch and make the happy ending changes to that branch only. It will have no effect on the master branch until you’re ready to merge the happy ending to the master branch.
+### BRANCHING
+So far, We’ve worked in a one Git branch which is master. Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 
 
 ![](picture/branch.png)
 
-* The circles are commits, and together form the Git project’s commit history.
-* New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have.
+ The circles are commits, and together form the Git project’s commit history.
+ New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have.
 
 
 * **git branch** show branches and which branch you are on it.
 * **git branch newBranchName** to create a new branch.
 
 * **git checkout branchName** used to switch from one branch to another.
-* **git merge branchName** to merge branches and (you will understand with exercises better).
+* **git merge branchName** Join two or more branches histories together (you will understand with exercises better).
 * **git branch -d branchName** will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
+
+#### Merge conflict
+Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep.
