@@ -17,7 +17,7 @@ Git is a free and open source distributed version control system designed to han
 
 ![minipic](picture/gitworkflow.png)
 
-### <First Exercise>
+### First Exercise
 
 1. Run **mkdir (repo name)**   &emsp;&emsp;  give repo name = famous
 2. Run **cd famous**           &emsp;&emsp;     cd (change directory) 
@@ -46,12 +46,12 @@ Before we dive into backtracking flow we need to know what HEAD is.In Git, the c
 To see HEAD commit run **git show HEAD**.
 
 
-* **git checkout HEAD** or **git checkout** filename,  will restore the file in your working directory to look exactly as it did when you last made a commit. Be careful for this command.
-* **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
-* **git reset** commit_SHA, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
+* **git checkout HEAD** or **git checkout** <filename>,  will restore the file in your working directory to look exactly as it did when you last made a commit. Be careful for this command.
+* **git reset HEAD** <filename>, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
+* **git reset** <commit_SHA>, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
 * **git commit --amend** change the most recent commit message.
 
-### <Second Exercise>
+### Second Exercise
 
 1. Run **git show HEAD**.
 2. Add text [click here](mostknown.html) add just **Mark Zuckerberg** info.
@@ -78,13 +78,13 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
  New Branch is a different version of the Git project. It contains commits from Master but also has commits that Master does not have.
 
 
-* **git branch** show branches and which branch you are on it.
-* **git branch newBranchName** to create a new branch.
+* **git branch**  show branches and which branch you are on it.
+* **git branch** <newBranchName> to create a new branch.
 
 * **git checkout <newBranchName>** used to switch from one branch to another.
 * **git checkout -b <newbranchname>**  this command create a new branch and want to switch to that new branch at the same time.
-* **git merge branchName** Join two or more branches histories together (you will understand with exercises better).
-* **git branch -d branchName** will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
+* **git merge** <branchName> Join two or more branches histories together (you will understand with exercises better).
+* **git branch -d** <branchName> will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
 
 #### Merge conflict
 Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep.
