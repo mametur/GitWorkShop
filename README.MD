@@ -4,12 +4,15 @@ Git is a free and open source distributed version control system designed to han
 
 ### BASIC GIT WORK FLOW 
 
-* **git init** creates a new Git repository
-* **git status** inspects the contents of the working directory and staging area
-* **git add** adds files from the working directory to the staging area
-* **git diff** shows the difference between the working directory and the staging area
-* **git commit** permanently stores file changes from the staging area in the repository
-* **git log** shows a list of all previous commits
+* **git init** creates a new Git repository.This creates a new subdirectory named *.git* that contains all of your necessary repository files — a Git repository skeleton.
+* **git status** inspects the contents of the working directory and staging area.
+* **git add** adds files from the working directory to the staging area.
+* **git diff** shows the difference between the working directory and the staging area.
+* **git diff --staged** or **git diff --cached** compares your staged changes to your last commit.
+* **git commit -m ''** permanently stores file changes from the staging area in the repository.
+* **git commit -v** same the commend above(git commit -m)  you can see exactly what changes you’re committing more.  
+* **git log** shows a list of all previous commits.
+* **git log -p** You can also limit the number of log entries displayed, such as using -2 to show only the last two entries.(git log -p -2)
 
 
 ![minipic](picture/gitworkflow.png)
@@ -28,9 +31,9 @@ Git is a free and open source distributed version control system designed to han
 10. Run **git commit -m 'add Elon Musk info and first commit'**
 11. Add another text [click here](mostknown.html.php) add just **Jeff Bezos** info.
 12. Run **git diff** see the difference between working directory and staging area then add file to staging area
-12. After git add, run **git commit -m 'add Jeff Bezos info and second commit'**
-13. Run **git log**  viewing the commit history,  extra and better command(**git log --oneline**).If your cursor gets stuck in “git log” mode in the terminal, press “**q**” on your keyboard to escape.
-14. Run **history** command to show you all of the last commands that have been recently used.
+13. After git add, run **git commit -m 'add Jeff Bezos info and second commit'**
+14. Run **git log**  viewing the commit history,  extra and better command(**git log --oneline**).If your cursor gets stuck in “git log” mode in the terminal, press “**q**” on your keyboard to escape.
+15. Run **history** command to show you all of the last commands that have been recently used.
 
 * Well done FIRST exercise is done. Are you ready for next exercises?? :)))
 
@@ -43,10 +46,10 @@ Before we dive into backtracking flow we need to know what HEAD is.In Git, the c
 To see HEAD commit run **git show HEAD**.
 
 
-* **git checkout HEAD** filename,  will restore the file in your working directory to look exactly as it did when you last made a commit.
+* **git checkout HEAD** or **git checkout** filename,  will restore the file in your working directory to look exactly as it did when you last made a commit. Be careful for this command.
 * **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
 * **git reset** commit_SHA, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
-
+* **git commit --amend** change the most recent commit message.
 ####  Second Exercise
 
 1. Run **git show HEAD**.
@@ -58,7 +61,7 @@ To see HEAD commit run **git show HEAD**.
 7. Run **git commit -m 'add Mark Zuckerberg's info'**.
 8. Run **git log --oneline** to see whole commits history.
 9.  **Now time to back previous commit you had made a mistake due to Mark Zuckerberg's info about Tim Cook (Lol:)) copy paste doesn't work every time)**.
-10. Run **git reset  commit_SHA**. 
+10. Run **git reset  SHA-1 checksum**. 
 11.  Run **git checkout HEAD people.txt**.
 12. Run **git log** your last commit should shown as( **add Jeff Bezos info and second commit**).
 
