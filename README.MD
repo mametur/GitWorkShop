@@ -61,7 +61,7 @@ To see HEAD commit run **git show HEAD**.
 7. Run **git commit -m 'add Mark Zuckerberg's info'**.
 8. Run **git log --oneline** to see whole commits history.
 9.  **Now time to back previous commit you had made a mistake due to Mark Zuckerberg's info about Tim Cook (Lol:)) copy paste doesn't work every time)**.
-10. Run **git reset  SHA-1 checksum**. 
+10. Run **git reset** SHA-1 checksum character. 
 11.  Run **git checkout HEAD people.txt**.
 12. Run **git log** your last commit should shown as( **add Jeff Bezos info and second commit**).
 
@@ -80,7 +80,8 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
 * **git branch** show branches and which branch you are on it.
 * **git branch newBranchName** to create a new branch.
 
-* **git checkout branchName** used to switch from one branch to another.
+* **git checkout <newBranchName>** used to switch from one branch to another.
+* **git checkout -b <newbranchname>**  this command create a new branch and want to switch to that new branch at the same time.
 * **git merge branchName** Join two or more branches histories together (you will understand with exercises better).
 * **git branch -d branchName** will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
 
@@ -96,7 +97,10 @@ How does Git know what branch you’re currently on? It keeps a special pointer 
 3. Add text [click_here](mostknown.html) add just **Mark Zuckerberg** info than add to staging area(**git add poeple.txt**).
 4. Run **git commit -m 'add Mark Zuckerberg's info to new branch testing'**.
 5. Run **git checkout master** now you are on master branch then run **git merge testing** this command will merge testing into master.
+6. Run **git log --oneline --graph** it will print out the history of your commits, showing where your branch pointers are and how your history has diverged.
 ![](picture/checkout-master.png)
 That command did two things. It moved the HEAD pointer back to point to the master branch, and it reverted the files in your working directory back to the snapshot that master points to. This also means the changes you make from this point forward will diverge from an older version of the project.
 
-**So far, Everything goes well ,let's make a conflict.**
+![](picture/27158273-caution-icon.jpg) However, before you switch branches, note that if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches.
+
+**So far, Everything goes well ,let's make a merge conflict.**
