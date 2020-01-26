@@ -17,7 +17,7 @@ Git is a free and open source distributed version control system designed to han
 
 ![minipic](picture/gitworkflow.png)
 
-### First Exercise
+### <First Exercise>
 
 1. Run **mkdir (repo name)**   &emsp;&emsp;  give repo name = famous
 2. Run **cd famous**           &emsp;&emsp;     cd (change directory) 
@@ -50,7 +50,8 @@ To see HEAD commit run **git show HEAD**.
 * **git reset HEAD** filename, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
 * **git reset** commit_SHA, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
 * **git commit --amend** change the most recent commit message.
-####  Second Exercise
+
+### <Second Exercise>
 
 1. Run **git show HEAD**.
 2. Add text [click here](mostknown.html) add just **Mark Zuckerberg** info.
@@ -89,7 +90,7 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
 Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep.
 
 
-####  Third Exercise
+###  <Third Exercise>
 
 1. Run **git branch testing** Now you have a new branch which is **testing**.Now testing branch has same commit history as master branch.
 How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD** (to see, run git log --oneline)
