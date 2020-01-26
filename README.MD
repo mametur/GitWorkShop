@@ -68,7 +68,7 @@ To see HEAD commit run **git show HEAD**.
 * Well done Second exercise is done. You are learning so fast:)))
 
 ### BRANCHING
-So far, We’ve worked in a one Git branch which is master. Branching means you diverge from the main line of development and continue to do work without messing with that main line.
+So far, We’ve worked in a one Git branch which is master(default branch). Branching means you diverge from the main line of development and continue to do work without messing with that main line.
 
 
 ![](picture/branch.png)
@@ -86,3 +86,17 @@ So far, We’ve worked in a one Git branch which is master. Branching means you 
 
 #### Merge conflict
 Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep.
+
+
+####  Third Exercise
+
+1. Run **git branch testing** Now you have a new branch which is **testing**.Now testing branch has same commit history as master branch.
+How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD** (to see, run git log --oneline)
+2. Run **git checkout testing** now you are on testing branch (to see HEAD pointer, git log --oneline).
+3. Add text [click_here](mostknown.html) add just **Mark Zuckerberg** info than add to staging area(**git add poeple.txt**).
+4. Run **git commit -m 'add Mark Zuckerberg's info to new branch testing'**.
+5. Run **git checkout master** now you are on master branch then run **git merge testing** this command will merge testing into master.
+![](picture/checkout-master.png)
+That command did two things. It moved the HEAD pointer back to point to the master branch, and it reverted the files in your working directory back to the snapshot that master points to. This also means the changes you make from this point forward will diverge from an older version of the project.
+
+**So far, Everything goes well ,let's make a conflict.**
