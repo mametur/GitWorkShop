@@ -87,10 +87,10 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
 * **git branch -d** <branchName> will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
 
 #### Merge conflict
-Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep.
+Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep. If you changed the same part of the same file differently in the two branches you’re merging, Git won’t be able to merge them cleanly.
 
 
-###  <Third Exercise>
+###  Third Exercise
 
 1. Run **git branch testing** Now you have a new branch which is **testing**.Now testing branch has same commit history as master branch.
 How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD** (to see, run git log --oneline)
