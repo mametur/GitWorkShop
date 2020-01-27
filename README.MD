@@ -104,4 +104,11 @@ That command did two things. It moved the HEAD pointer back to point to the mast
 
 ![](picture/27158273-caution-icon.jpg) However, before you switch branches, note that if your working directory or staging area has uncommitted changes that conflict with the branch you’re checking out, Git won’t let you switch branches. It’s best to have a clean working state when you switch branches.
 
-**So far, Everything goes well ,let's make a merge conflict.**
+So far, Everything goes well ,let's make a merge conflict.
+
+7. Change the first line of Mark Zuckerberg's paragraph for two branches but **has to be different** content then commit out them.
+
+8. Merge testing branch into the master. Now you must have a merge conflict.
+
+Git adds standard conflict-resolution markers(<<<<<<<, =======, and >>>>>>> ) to the files that have conflicts, so you can open them manually and resolve those conflicts. Also remove all those conflict-resolution markers then run git add on each file to mark it as resolved and commit out.
+
