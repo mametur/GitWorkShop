@@ -84,7 +84,8 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
 * **git checkout <newBranchName>** used to switch from one branch to another.
 * **git checkout -b <newbranchname>**  this command create a new branch and want to switch to that new branch at the same time.
 * **git merge** <branchName> Join two or more branches histories together (you will understand with exercises better).
-* **git branch -d** <branchName> will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch)
+* **git branch -d** <branchName> will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch).
+* **git merge --abort** If you perhaps weren’t expecting conflicts and don’t want to quite deal with the situation yet, you can simply back out of the merge with this command.
 
 #### Merge conflict
 Be calm!! most developers are afraid of that part but once when you get it you will be able to solve it. To understanding merge conflict in good way do more exercises of course with me:))Basically Git doesn’t know which changes you want to keep. If you changed the same part of the same file differently in the two branches you’re merging, Git won’t be able to merge them cleanly.
