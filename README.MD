@@ -113,3 +113,11 @@ So far, Everything goes well ,let's make a merge conflict.
 
 Git adds standard conflict-resolution markers(<<<<<<<, =======, and >>>>>>> ) to the files that have conflicts, so you can open them manually and resolve those conflicts. Also remove all those conflict-resolution markers then run git add on each file to mark it as resolved and commit out.
 
+**Well done!!! You have just done with basic GIT** We never stop to learn new things time to learn some advance Git features.
+
+### GIT STASH
+
+when you’ve been working on part of your project, things are in a messy state and you want to switch branches for a bit to work on something else. The problem is, you don’t want to do a commit of half-done work just so you can get back to this point later. The answer to this issue is the git stash command.
+
+1. **git stash**  save out unfinished work changes without committing them.It will save with last commit which come from HEAD(check explanation of head in **backtrack in git** part )
+2. **git stash save <'message'>** same as git stash command but difference is you can save with your message as commit. 
