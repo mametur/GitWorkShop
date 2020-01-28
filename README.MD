@@ -121,3 +121,9 @@ when you’ve been working on part of your project, things are in a messy state 
 
 1. **git stash**  save out unfinished work changes without committing them.It will save with last commit which come from HEAD(check explanation of head in **backtrack in git** part )
 2. **git stash save <'message'>** same as git stash command but difference is you can save with your message as commit. 
+3. **git stash list** view the list of stashes you made at any time! Also you can use **git stash list -p** p stand for <options> ,this commend will give more info about all stashes.
+4. **git stash show -p <stashID>** , view only specific stash that you want it. StashID is like this (stash@{1}) place number in command line such as, **git stash show -p 1**.
+5.**git stash apply <stashID>**  reapply the changes to your working copy and keep them in your stash. If you don’t specify a stash, Git assumes the most recent stash and tries to apply it.
+6. **git stash pop <stashID>** same as apply command but your stash **removes the changes from your stash** and reapplies them to your working copy.
+7. **git stash drop <stashID>** to remove stash.
+8. **git stash clear** remove all stashes.
