@@ -127,3 +127,6 @@ when you’ve been working on part of your project, things are in a messy state 
 6. **git stash pop <stashID>** same as apply command but your stash **removes the changes from your stash** and reapplies them to your working copy.
 7. **git stash drop <stashID>** to remove stash.
 8. **git stash clear** remove all stashes.
+
+#### Creating a Branch from a Stash
+If you stash some work, leave it there for a while, and continue on the branch from which you stashed the work, you may have a problem reapplying the work. If the apply tries to modify a file that you’ve since modified, you’ll get a merge conflict and will have to try to resolve it. If you want an easier way to test the stashed changes again, you can run **git stash branch <new branchname>**, which creates a new branch for you with your selected branch name, checks out the commit you were on when you stashed your work, reapplies your work there, and then drops the stash if it applies successfully
