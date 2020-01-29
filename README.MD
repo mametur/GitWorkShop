@@ -46,9 +46,9 @@ Before we dive into backtracking flow we need to know what HEAD is.In Git, the c
 To see HEAD commit run **git show HEAD**.
 
 
-* **git checkout HEAD** or **git checkout** <filename>,  will restore the file in your working directory to look exactly as it did when you last made a commit. Be careful for this command.
-* **git reset HEAD** <filename>, this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
-* **git reset** <commit_SHA>, resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
+* **git checkout HEAD** or **git checkout** (filename),  will restore the file in your working directory to look exactly as it did when you last made a commit. Be careful for this command.
+* **git reset HEAD** (filename), this command resets the file in the staging area to be the same as the **HEAD** commit. It does not discard file changes from the working directory.
+* **git reset** (commit_SHA), resets to a previous commit in your commit history.This command works by using the first 7 characters of the SHA of a previous commit( use **git log** to reach all commits).
 * **git commit --amend** change the most recent commit message.
 
 ### Second Exercise
@@ -79,12 +79,12 @@ So far, We’ve worked in a one Git branch which is master(default branch). Bran
 
 
 * **git branch**  show branches and which branch you are on it.
-* **git branch** <newBranchName> to create a new branch.
+* **git branch**(newBranchName) to create a new branch.
 
-* **git checkout <newBranchName>** used to switch from one branch to another.
-* **git checkout -b <newbranchname>**  this command create a new branch and want to switch to that new branch at the same time.
-* **git merge** <branchName> Join two or more branches histories together (you will understand with exercises better).
-* **git branch -d** <branchName> will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch).
+* **git checkout (newBranchName)** used to switch from one branch to another.
+* **git checkout -b (newbranchname)**  this command create a new branch and want to switch to that new branch at the same time.
+* **git merge** (branchName) Join two or more branches histories together (you will understand with exercises better).
+* **git branch -d** (branchName) will delete the specified branch from your project.(- if you use 'D' instead of 'd' which force to delete branch).
 * **git merge --abort** If you perhaps weren’t expecting conflicts and don’t want to quite deal with the situation yet, you can simply back out of the merge with this command.
 
 #### Merge conflict
@@ -120,13 +120,28 @@ Git adds standard conflict-resolution markers(<<<<<<<, =======, and >>>>>>> ) to
 when you’ve been working on part of your project, things are in a messy state and you want to switch branches for a bit to work on something else. The problem is, you don’t want to do a commit of half-done work just so you can get back to this point later. The answer to this issue is the git stash command.
 
 1. **git stash**  save out unfinished work changes without committing them.It will save with last commit which come from HEAD(check explanation of head in **backtrack in git** part )
-2. **git stash save <'message'>** same as git stash command but difference is you can save with your message as commit. 
-3. **git stash list** view the list of stashes you made at any time! Also you can use **git stash list -p** p stand for <options> ,this commend will give more info about all stashes.
-4. **git stash show -p <stashID>** , view only specific stash that you want it. StashID is like this (stash@{1}) place number in command line such as, **git stash show -p 1**.
-5.**git stash apply <stashID>**  reapply the changes to your working copy and keep them in your stash. If you don’t specify a stash, Git assumes the most recent stash and tries to apply it.
-6. **git stash pop <stashID>** same as apply command but your stash **removes the changes from your stash** and reapplies them to your working copy.
-7. **git stash drop <stashID>** to remove stash.
+2. **git stash save ('message')** same as git stash command but difference is you can save with your message as commit. 
+3. **git stash list** view the list of stashes you made at any time! Also you can use **git stash list -p** p stand for 'options' ,this commend will give more info about all stashes.
+4. **git stash show -p (stashID)** , view only specific stash that you want it. StashID is like this (stash@{1}) place number in command line such as, **git stash show -p 1**.
+
+5. **git stash apply (stashID)**  reapply the changes to your working copy and keep them in your stash. If you don’t specify a stash, Git assumes the most recent stash and tries to apply it.
+6. **git stash pop (stashID)** same as apply command but your stash **removes the changes from your stash** and reapplies them to your working copy.
+7. **git stash drop (stashID)** to remove stash.
 8. **git stash clear** remove all stashes.
 
 #### Creating a Branch from a Stash
-If you stash some work, leave it there for a while, and continue on the branch from which you stashed the work, you may have a problem reapplying the work. If the apply tries to modify a file that you’ve since modified, you’ll get a merge conflict and will have to try to resolve it. If you want an easier way to test the stashed changes again, you can run **git stash branch <new branchname>**, which creates a new branch for you with your selected branch name, checks out the commit you were on when you stashed your work, reapplies your work there, and then drops the stash if it applies successfully
+If you stash some work, leave it there for a while, and continue on the branch from which you stashed the work, you may have a problem reapplying the work. If the apply tries to modify a file that you’ve since modified, you’ll get a merge conflict and will have to try to resolve it. If you want an easier way to test the stashed changes again, you can run **git stash branch (new branchName)**, which creates a new branch for you with your selected branch name, checks out the commit you were on when you stashed your work, reapplies your work there, and then drops the stash if it applies successfully
+
+### GIT REVERT
+
+The git revert command can be considered an 'undo' type command, however, it is not a traditional undo operation. Instead of removing the commit from the project history, it figures out how to invert the changes introduced by the commit and appends a new commit with the resulting inverse content. This prevents Git from losing history, which is important for the integrity of your revision history and for reliable collaboration.[click_here](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert)
+
+###  Fourth Exercise
+
+1. make a new repo.
+2. add [click here](mostknown.html) add just **Elon Musk's** info then commit it.
+3. add [click here](mostknown.html) add just **Jeff Bezos** info then commit it
+4. Run **git log --oneline**
+5. Run **git revert (stashID)** , select last current (stashID).
+6. Run **git log --oneline** now see differences between **reset** and **revert** . Reset remove specific commit from history whereas Revert keep history commit with adding revert commit.
+7. For more challenges you could play with git stash commends. 
